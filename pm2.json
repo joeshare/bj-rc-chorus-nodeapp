@@ -1,0 +1,23 @@
+{
+  "apps" : [
+    {
+    "name" : "chorus-app",
+    "script": "./bin/www",
+    "cwd": "./",
+    "exec_mode": "cluster",
+    "instances": 4,
+    "error_file":"./logs/app-err.log",
+    "out_file":"./logs/app-out.log",
+    "log_date_format":"YYYY-MM-DD HH:mm Z"
+    },
+	{
+      "name" : "chorus-app-websocket",
+      "script": "./websocket/bin/websocket.js",
+      "cwd": "./",
+      "exec_mode": "cluster",
+      "instances": 4,
+      "error_file":"./logs/app-websocket-err.log",
+      "out_file":"./logs/app-websocket-out.log",
+      "log_date_format":"YYYY-MM-DD HH:mm Z"
+    }]
+}

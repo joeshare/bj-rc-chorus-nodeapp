@@ -1,0 +1,32 @@
+{
+
+  "appenders": [
+    {
+      "type":"console",
+      "category":"console"
+    },
+    {
+      "type": "dateFile",
+      "filename": "logs/info/info_",
+      "pattern": "yyyy_MM_dd.log",
+      "maxLogSize": 1048576,
+      "alwaysIncludePattern": true,
+      "category": "logInfo"
+    },
+    {
+      "type": "dateFile",
+      "filename": "logs/error/error_",
+      "alwaysIncludePattern": true,
+      "pattern": "yyyy_MM_dd.log",
+      "maxLogSize": 1048576,
+      "category": "logErr"
+    }
+
+  ],
+  "replaceConsole": true,
+  "levels":
+  {
+    "logInfo":"INFO",
+    "logErr":"ERROR"
+  }
+}
